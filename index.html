@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
     --bg: #FAF9F6;
     --surface: #FFFFFF;
@@ -20,16 +20,16 @@
     --text-3: #888780;
     --radius: 10px;
     --radius-lg: 14px;
-
+ 
     --teal: #1D9E75;    --teal-bg: #E1F5EE;    --teal-dark: #085041;
     --blue: #378ADD;    --blue-bg: #E6F1FB;    --blue-dark: #0C447C;
     --amber: #BA7517;   --amber-bg: #FAEEDA;   --amber-dark: #412402;
     --pink: #D4537E;    --pink-bg: #FBEAF0;    --pink-dark: #72243E;
-
+ 
     --red-1: #FAECE7; --red-2: #F5C4B3; --red-3: #F09595;
     --red-4: #E24B4A; --red-4t: #993C1D;
   }
-
+ 
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #18181A;
@@ -40,19 +40,19 @@
       --text: #F0EFE8;
       --text-2: #B4B2A9;
       --text-3: #888780;
-
+ 
       --teal-bg: #0A3529; --teal-dark: #9FE1CB;
       --blue-bg: #0B2540; --blue-dark: #B5D4F4;
       --amber-bg: #3A2007; --amber-dark: #FAC775;
       --pink-bg: #3A1525; --pink-dark: #F4C0D1;
-
+ 
       --red-1: #3A1515; --red-2: #5A1E1E; --red-3: #7A2020;
       --red-4: #C43030; --red-4t: #F7C1C1;
     }
   }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--bg);
@@ -60,7 +60,7 @@
     min-height: 100vh;
     line-height: 1.6;
   }
-
+ 
   .top-bar {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
@@ -96,9 +96,9 @@
     color: var(--teal-dark);
     font-weight: 500;
   }
-
+ 
   .container { max-width: 780px; margin: 0 auto; padding: 2rem 1.25rem; }
-
+ 
   .tabs {
     display: flex;
     background: var(--surface2);
@@ -129,13 +129,13 @@
     color: var(--text);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12);
   }
-
+ 
   /* ── ROSTER ─────────────────────────── */
   .roster-view, .cal-view { display: block; }
   .roster-view.hide { display: none; }
   .cal-view { display: none; }
   .cal-view.show { display: block; }
-
+ 
   .person-row {
     display: flex;
     gap: 8px;
@@ -168,7 +168,7 @@
   .p1 .avatar { background: var(--blue-bg); color: var(--blue-dark); }
   .p2 .avatar { background: var(--amber-bg); color: var(--amber-dark); }
   .p3 .avatar { background: var(--pink-bg); color: var(--pink-dark); }
-
+ 
   .week-nav {
     display: flex; align-items: center; gap: 12px;
     margin-bottom: 1.25rem;
@@ -188,18 +188,18 @@
   .week-label-wrap { flex: 1; }
   .week-label { font-size: 15px; font-weight: 600; color: var(--text); }
   .week-sub { font-size: 12px; color: var(--text-3); margin-top: 1px; }
-
+ 
   .week-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 7px;
     margin-bottom: 1.5rem;
   }
-
+ 
   @media (max-width: 600px) {
     .week-grid { grid-template-columns: repeat(7, 1fr); gap: 4px; }
   }
-
+ 
   .day-cell {
     border: 1.5px solid var(--border);
     border-radius: var(--radius);
@@ -231,7 +231,7 @@
   .dot.d1 { background: var(--blue); }
   .dot.d2 { background: var(--amber); }
   .dot.d3 { background: var(--pink); }
-
+ 
   .day-cell.selected { transform: translateY(-2px); }
   .day-cell.selected-0 { border-color: var(--teal); background: var(--teal-bg); box-shadow: 0 2px 8px rgba(29,158,117,0.15); }
   .day-cell.selected-1 { border-color: var(--blue); background: var(--blue-bg); box-shadow: 0 2px 8px rgba(55,138,221,0.15); }
@@ -248,7 +248,7 @@
   .selected-1 .check-mark { color: var(--blue); }
   .selected-2 .check-mark { color: var(--amber); }
   .selected-3 .check-mark { color: var(--pink); }
-
+ 
   .legend {
     display: flex; gap: 14px; flex-wrap: wrap;
     margin-bottom: 1rem;
@@ -267,7 +267,7 @@
   .la1 { background: var(--blue-bg); color: var(--blue-dark); }
   .la2 { background: var(--amber-bg); color: var(--amber-dark); }
   .la3 { background: var(--pink-bg); color: var(--pink-dark); }
-
+ 
   .save-bar {
     padding: 14px 18px;
     background: var(--surface);
@@ -295,14 +295,14 @@
   .save-btn:hover { opacity: 0.85; }
   .save-btn:active { transform: scale(0.97); }
   .save-btn.saved { background: var(--teal); }
-
+ 
   /* ── CALENDAR ─────────────────────────── */
   .cal-month-nav {
     display: flex; align-items: center; gap: 12px;
     margin-bottom: 1.25rem;
   }
   .month-label { font-size: 18px; font-weight: 600; flex: 1; }
-
+ 
   .cal-header {
     display: grid; grid-template-columns: repeat(7, 1fr);
     gap: 5px; margin-bottom: 5px;
@@ -325,7 +325,7 @@
   }
   .cal-cell.empty { border-color: transparent; background: transparent; }
   .cal-num-d { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
-
+ 
   .cal-cell.h1 { background: var(--red-1); border-color: rgba(227,100,80,0.2); }
   .cal-cell.h2 { background: var(--red-2); border-color: rgba(227,100,80,0.3); }
   .cal-cell.h3 { background: var(--red-3); border-color: rgba(227,100,80,0.4); }
@@ -334,7 +334,7 @@
   .cal-cell.h3 .cal-num-d { color: #791F1F; }
   .cal-cell.h2 .cal-num-d { color: #993C1D; }
   .cal-cell.h1 .cal-num-d { color: #993C1D; }
-
+ 
   .avail-badge {
     display: inline-flex; align-items: center;
     font-size: 11px; font-weight: 600;
@@ -345,10 +345,10 @@
   .ab2 { background: rgba(245,196,179,0.8); color: #993C1D; }
   .ab3 { background: rgba(240,149,149,0.8); color: #791F1F; }
   .ab4 { background: rgba(255,255,255,0.25); color: #fff; }
-
+ 
   .avail-dots { display: flex; gap: 3px; flex-wrap: wrap; margin-top: 3px; }
   .avail-dot { width: 6px; height: 6px; border-radius: 50%; }
-
+ 
   .heat-legend-bar {
     display: flex; align-items: center; gap: 8px;
     margin-bottom: 1.25rem;
@@ -363,12 +363,12 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="top-bar">
   <h1>Squad Planner</h1>
   <div class="status-pill" id="top-status">Ready</div>
 </div>
-
+ 
 <div class="container">
   <div class="tabs">
     <button class="tab active" id="tab-roster" onclick="switchTab('roster')">
@@ -380,11 +380,11 @@
       Availability calendar
     </button>
   </div>
-
+ 
   <!-- ROSTER VIEW -->
   <div class="roster-view" id="roster-view">
     <div class="person-row" id="person-row"></div>
-
+ 
     <div class="week-nav">
       <button class="nav-btn" onclick="changeWeek(-1)" aria-label="Previous week">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
@@ -397,10 +397,10 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
       </button>
     </div>
-
+ 
     <div class="legend" id="legend"></div>
     <div class="week-grid" id="week-grid"></div>
-
+ 
     <div class="save-bar">
       <div class="save-info">
         <div class="save-title" id="save-title">Click days to mark you're free</div>
@@ -409,7 +409,7 @@
       <button class="save-btn" id="save-btn" onclick="saveDays()">Save days ✓</button>
     </div>
   </div>
-
+ 
   <!-- CALENDAR VIEW -->
   <div class="cal-view" id="cal-view">
     <div class="cal-month-nav">
@@ -421,7 +421,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
       </button>
     </div>
-
+ 
     <div class="heat-legend-bar">
       <span>People free:</span>
       <div class="hl-item"><div class="hl-swatch" style="background:var(--red-1)"></div><span>1</span></div>
@@ -430,7 +430,7 @@
       <div class="hl-item"><div class="hl-swatch" style="background:var(--red-4)"></div><span style="color:var(--red-4t)">4</span></div>
       <span style="margin-left:4px">— darker = more people free</span>
     </div>
-
+ 
     <div class="cal-header">
       <div class="cal-dname">Sun</div>
       <div class="cal-dname">Mon</div>
@@ -443,19 +443,67 @@
     <div class="cal-grid" id="cal-grid"></div>
   </div>
 </div>
-
+ 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
-  const NAMES  = ['Conal', 'Oige', 'Luke', 'David'];
-  const INITIALS = ['CMC', 'OMC', 'LOD', 'DOC'];
+  const SUPABASE_URL = 'https://kneshosvregopifztcxx.supabase.co';
+  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtuZXNob3N2cmVnb3BpZnp0Y3h4Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDE1NDc2OSwiZXhwIjoyMDk1NzMwNzY5fQ.A3ZA7PA8-yQGLrgwZ16pqfp_DZccNIA52pWQ5Hi4djI';
+  const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+ 
+  const NAMES     = ['Alex', 'Jordan', 'Riley', 'Sam'];
+  const INITIALS  = ['AL', 'JO', 'RI', 'SA'];
   const DOT_COLORS = ['#1D9E75', '#378ADD', '#BA7517', '#D4537E'];
-
+ 
   let availability = {};
-  try { availability = JSON.parse(localStorage.getItem('squad_avail') || '{}'); } catch(e) {}
-
   let currentPerson = 0;
   let weekOffset = 0;
   let calMonth = new Date(); calMonth.setDate(1); calMonth.setHours(0,0,0,0);
-
+ 
+  /* ─── Load all data from Supabase ─── */
+  async function loadAll() {
+    setStatus('Syncing…');
+    const { data, error } = await sb.from('availability').select('*');
+    if (error) { setStatus('Sync error'); return; }
+    availability = {};
+    data.forEach(row => {
+      if (row.free) {
+        if (!availability[row.person_index]) availability[row.person_index] = {};
+        availability[row.person_index][row.date] = true;
+      }
+    });
+    renderWeek();
+    setStatus(NAMES[currentPerson] + "'s roster");
+  }
+ 
+  /* ─── Toggle a day (optimistic + upsert) ─── */
+  async function toggleDay(key) {
+    if (!availability[currentPerson]) availability[currentPerson] = {};
+    const nowFree = !availability[currentPerson][key];
+    availability[currentPerson][key] = nowFree;
+    renderWeek();
+ 
+    if (nowFree) {
+      await sb.from('availability').upsert({ person_index: currentPerson, date: key, free: true });
+    } else {
+      await sb.from('availability').delete().eq('person_index', currentPerson).eq('date', key);
+    }
+  }
+ 
+  /* ─── Save button — reload from DB to sync everyone's latest ─── */
+  async function saveDays() {
+    const btn = document.getElementById('save-btn');
+    btn.textContent = 'Syncing…';
+    await loadAll();
+    if (document.getElementById('cal-view').classList.contains('show')) renderCalendar();
+    btn.textContent = 'Synced! ✓';
+    btn.classList.add('saved');
+    setTimeout(() => { btn.textContent = 'Save & sync ✓'; btn.classList.remove('saved'); }, 2000);
+  }
+ 
+  function setStatus(msg) {
+    document.getElementById('top-status').textContent = msg;
+  }
+ 
   /* ─── Helpers ─── */
   function getMonday(offset) {
     const d = new Date();
@@ -465,19 +513,19 @@
     d.setHours(0,0,0,0);
     return d;
   }
-
+ 
   function dateKey(d) { return d.toISOString().split('T')[0]; }
-
+ 
   function countFree(key) {
     let n = 0;
     NAMES.forEach((_,i) => { if ((availability[i]||{})[key]) n++; });
     return n;
   }
-
+ 
   function freePeople(key) {
     return NAMES.map((_,i) => (availability[i]||{})[key] ? i : -1).filter(i => i >= 0);
   }
-
+ 
   /* ─── Render person buttons ─── */
   function renderPersonRow() {
     const el = document.getElementById('person-row');
@@ -487,7 +535,7 @@
         ${n}
       </button>`).join('');
   }
-
+ 
   /* ─── Render legend ─── */
   function renderLegend() {
     const el = document.getElementById('legend');
@@ -497,12 +545,12 @@
         ${n}
       </div>`).join('');
   }
-
+ 
   /* ─── Render weekly grid ─── */
   function renderWeek() {
     const mon = getMonday(weekOffset);
     const sun = new Date(mon); sun.setDate(sun.getDate() + 6);
-
+ 
     const fmt = d => d.toLocaleDateString('en-IE', { month: 'short', day: 'numeric' });
     document.getElementById('week-label').textContent =
       fmt(mon) + ' – ' + fmt(sun) + ', ' + mon.getFullYear();
@@ -511,29 +559,29 @@
       weekOffset === 1 ? 'Next week' :
       weekOffset === -1 ? 'Last week' :
       (weekOffset > 0 ? `${weekOffset} weeks ahead` : `${Math.abs(weekOffset)} weeks ago`);
-
+ 
     const today = dateKey(new Date());
     const days  = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
     const grid  = document.getElementById('week-grid');
     grid.innerHTML = '';
-
+ 
     for (let i = 0; i < 7; i++) {
       const d = new Date(mon); d.setDate(mon.getDate() + i);
       const key  = dateKey(d);
       const isTod = key === today;
       const isSel = !!(availability[currentPerson] || {})[key];
-
+ 
       const dots = NAMES.map((_,pi) =>
         (availability[pi]||{})[key] ? `<div class="dot d${pi}" title="${NAMES[pi]}"></div>` : ''
       ).join('');
-
+ 
       const cell = document.createElement('div');
       cell.className = [
         'day-cell',
         isTod ? 'today' : '',
         isSel ? `selected selected-${currentPerson}` : ''
       ].filter(Boolean).join(' ');
-
+ 
       cell.innerHTML = `
         <span class="check-mark">✓</span>
         <div class="day-name">${days[i]}</div>
@@ -542,110 +590,86 @@
       cell.onclick = () => toggleDay(key);
       grid.appendChild(cell);
     }
-
+ 
     const total = Object.values(availability[currentPerson]||{}).filter(Boolean).length;
-    document.getElementById('save-title').textContent =
-      `${NAMES[currentPerson]}: tap days you're free`;
+    document.getElementById('save-title').textContent = `${NAMES[currentPerson]}: tap days you're free`;
     document.getElementById('save-sub').textContent =
-      `${total} day${total!==1?'s':''} marked total across all weeks`;
-    document.getElementById('top-status').textContent =
-      `${NAMES[currentPerson]}'s roster`;
+      `${total} day${total!==1?'s':''} marked — hit "Save & sync" to pull everyone's latest`;
+    document.getElementById('save-btn').textContent = 'Save & sync ✓';
   }
-
-  /* ─── Toggle a day ─── */
-  function toggleDay(key) {
-    if (!availability[currentPerson]) availability[currentPerson] = {};
-    availability[currentPerson][key] = !availability[currentPerson][key];
-    renderWeek();
-  }
-
-  /* ─── Save ─── */
-  function saveDays() {
-    localStorage.setItem('squad_avail', JSON.stringify(availability));
-    const btn = document.getElementById('save-btn');
-    btn.textContent = 'Saved! ✓';
-    btn.classList.add('saved');
-    setTimeout(() => { btn.textContent = 'Save days ✓'; btn.classList.remove('saved'); }, 2000);
-  }
-
+ 
   /* ─── Switch person ─── */
   function setPerson(i) {
     currentPerson = i;
     renderPersonRow();
     renderWeek();
+    setStatus(NAMES[i] + "'s roster");
   }
-
+ 
   /* ─── Week navigation ─── */
   function changeWeek(d) { weekOffset += d; renderWeek(); }
-
+ 
   /* ─── Tab switching ─── */
   function switchTab(tab) {
     document.getElementById('tab-roster').classList.toggle('active', tab==='roster');
     document.getElementById('tab-cal').classList.toggle('active', tab==='calendar');
     document.getElementById('roster-view').classList.toggle('hide', tab!=='roster');
     document.getElementById('cal-view').classList.toggle('show', tab==='calendar');
-    if (tab === 'calendar') renderCalendar();
-    if (tab === 'roster') {
-      document.getElementById('top-status').textContent = NAMES[currentPerson] + "'s roster";
-    }
+    if (tab === 'calendar') { loadAll().then(renderCalendar); }
+    if (tab === 'roster') setStatus(NAMES[currentPerson] + "'s roster");
   }
-
+ 
   /* ─── Month navigation ─── */
   function changeMonth(d) {
     calMonth.setMonth(calMonth.getMonth() + d);
     renderCalendar();
   }
-
+ 
   /* ─── Render calendar ─── */
   function renderCalendar() {
     const y = calMonth.getFullYear();
     const m = calMonth.getMonth();
     document.getElementById('month-label').textContent =
       calMonth.toLocaleDateString('en-IE', { month: 'long', year: 'numeric' });
-
+ 
     const firstDay    = new Date(y, m, 1).getDay();
     const daysInMonth = new Date(y, m+1, 0).getDate();
     const grid = document.getElementById('cal-grid');
     grid.innerHTML = '';
-
-    // Total days marked this month
+ 
     let monthTotal = 0;
-
+ 
     for (let i = 0; i < firstDay; i++) {
       const e = document.createElement('div'); e.className = 'cal-cell empty';
       grid.appendChild(e);
     }
-
+ 
     for (let d = 1; d <= daysInMonth; d++) {
       const date = new Date(y, m, d);
       const key  = dateKey(date);
       const count = countFree(key);
       const ppl   = freePeople(key);
       monthTotal += count;
-
+ 
       const cell = document.createElement('div');
       cell.className = `cal-cell ${count>0?'h'+count:''}`;
-
-      const badge = count > 0
-        ? `<div class="avail-badge ab${count}">${count}/4</div>`
-        : '';
-
+ 
+      const badge = count > 0 ? `<div class="avail-badge ab${count}">${count}/4</div>` : '';
       const avDots = ppl.map(pi =>
         `<div class="avail-dot" style="background:${DOT_COLORS[pi]}" title="${NAMES[pi]}"></div>`
       ).join('');
-
+ 
       cell.innerHTML = `<div class="cal-num-d">${d}</div>${badge}<div class="avail-dots">${avDots}</div>`;
       grid.appendChild(cell);
     }
-
-    document.getElementById('top-status').textContent =
-      monthTotal > 0 ? `${monthTotal} free day slots` : 'No days entered yet';
+ 
+    setStatus(monthTotal > 0 ? `${monthTotal} free day slots` : 'No days entered yet');
   }
-
+ 
   /* ─── Init ─── */
   renderPersonRow();
   renderLegend();
-  renderWeek();
+  loadAll();
 </script>
 </body>
 </html>
