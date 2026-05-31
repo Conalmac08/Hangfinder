@@ -514,7 +514,11 @@
     return d;
   }
  
-  function dateKey(d) { return d.toISOString().split('T')[0]; }
+  function dateKey(d) {
+  const offset = d.getTimezoneOffset();
+  const local = new Date(d.getTime() - offset * 60000);
+  return local.toISOString().split('T')[0];
+}
  
   function countFree(key) {
     let n = 0;
